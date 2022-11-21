@@ -22,14 +22,13 @@ downButton.addEventListener('click', () => {
   changeSlide('down')
 })
 
-downButton.addEventListener('keydown', (event) => {
-  console.log(event)
-  changeSlide('down')
+document.addEventListener('keydown', (event) => {
+  if(event.key === 'ArrowUp') {
+    changeSlide('up')
+  } else if (event.key === 'ArrowDown')
+    changeSlide('down')
 })
 
-downButton.addEventListener('keyup', (event) => {
-  changeSlide('down')
-})
 
 function changeSlide(direction) {
   if (direction === 'up') {
